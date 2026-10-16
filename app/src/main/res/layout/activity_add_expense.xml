@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Root">
+
+    <LinearLayout style="@style/Header">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/HeaderBack" />
+
+        <TextView
+            style="@style/HeaderTitle"
+            android:accessibilityHeading="true"
+            android:text="Thêm khoản chi" />
+    </LinearLayout>
+
+    <ScrollView style="@style/Body">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- 1. Tên khoản chi -->
+            <TextView
+                style="@style/Label"
+                android:labelFor="@+id/edtName"
+                android:text="Tên khoản chi" />
+
+            <EditText
+                android:id="@+id/edtName"
+                style="@style/Input"
+                android:hint="Ví dụ: Ăn trưa"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences" />
+
+            <!-- 2. Số tiền -->
+            <TextView
+                style="@style/Label"
+                android:labelFor="@+id/edtAmount"
+                android:text="Số tiền (VNĐ)" />
+
+            <EditText
+                android:id="@+id/edtAmount"
+                style="@style/Input"
+                android:hint="Chỉ nhập số, ví dụ: 45000"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="15" />
+
+            <!-- 3. Danh mục -->
+            <TextView
+                style="@style/Label"
+                android:text="Danh mục" />
+
+            <Spinner
+                android:id="@+id/spnCategory"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_spinner"
+                android:contentDescription="Danh mục"
+                android:entries="@array/categories"
+                android:paddingStart="6dp"
+                android:paddingEnd="40dp"
+                android:spinnerMode="dropdown" />
+
+            <!-- 4. Ngày chi tiêu -->
+            <TextView
+                style="@style/Label"
+                android:text="Ngày chi tiêu" />
+
+            <DatePicker
+                android:id="@+id/dpDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
+
+            <!-- 5. Ghi chú -->
+            <TextView
+                style="@style/Label"
+                android:labelFor="@+id/edtNote"
+                android:text="Ghi chú (không bắt buộc)" />
+
+            <EditText
+                android:id="@+id/edtNote"
+                style="@style/Input"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:hint="Nhập ghi chú (nhiều dòng)…"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="3"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+
+            <!-- 6. Nút Lưu khoản chi -->
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/Btn"
+                android:layout_marginTop="24dp"
+                android:text="Lưu khoản chi" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

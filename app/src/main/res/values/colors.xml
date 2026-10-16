@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal">#00796B</color>
+    <color name="teal_dark">#004D43</color>
+    <color name="teal_soft">#DDF0EC</color>
+    <color name="on_teal_dim">#CFEAE5</color>
+    <color name="bg">#F3F6F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="outline">#D6DFDD</color>
+    <color name="text">#16211F</color>
+    <color name="text2">#52615E</color>
+    <color name="hint">#6A7976</color>
+    <color name="red">#C62828</color>
+</resources>
